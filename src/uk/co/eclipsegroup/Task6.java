@@ -8,5 +8,7 @@ public class Task6 {
         }
         Boolean testerCheck = sum == 44023d;
         System.out.println(testerCheck);
+        Boolean testerStreamCheck = Bar.beers.stream().mapToDouble(Beer::getPrice).sum() == 44023d;
+        System.out.println(testerStreamCheck);
     }
 }

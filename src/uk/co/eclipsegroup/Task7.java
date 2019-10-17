@@ -10,5 +10,7 @@ public class Task7 {
         System.out.println(sum);
         Boolean testerCheck = sum == 44023d;
         System.out.println(testerCheck);
+        Boolean testerStreamCheck = Bar.beers.stream().peek(System.out::println).mapToDouble(Beer::getPrice).sum() == 44023d;
+        System.out.println(testerStreamCheck);
     }
 }

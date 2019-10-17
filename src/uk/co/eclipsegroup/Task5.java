@@ -7,5 +7,6 @@ public class Task5 {
                 System.out.println(beer);
             }
         }
+        Bar.beers.stream().filter(b -> b.getPrice() < 2).forEach(System.out::println);
     }
 }

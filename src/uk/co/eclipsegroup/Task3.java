@@ -2,8 +2,9 @@ package uk.co.eclipsegroup;
 
 public class Task3 {
     public static void main(String[] args) {
-        for(Beer beer : Bar.beers){
+        for (Beer beer : Bar.beers) {
             System.out.println(beer.getPrice());
         }
+        Bar.beers.stream().map(Beer::getPrice).forEach(System.out::println);
     }
 }
