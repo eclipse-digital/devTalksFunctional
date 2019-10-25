@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class Bar {
-    static List<Beer> beers = Arrays.asList(
+    public static List<Beer> beers = Arrays.asList(
             new Beer("Przeniczne jasne",5d),
             new Beer("Miodowe ciemne",6d),
             new Beer("Dzban Krzysztofa",0.1),
