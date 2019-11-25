@@ -12,7 +12,7 @@ public class Bar {
             new Beer("Dzban Krzysztofa", 1d, Type.IPA, Arrays.asList("Chinook", "Columbus", "Amarillo")),
             new Beer("Angielskie Ale", 4d, Type.EPA, Arrays.asList("Chinook", "Columbus", "Amarillo", "Simcoe")),
             new Beer("Eclipsowe Mocne", 9d, Type.STOUT, Collections.singletonList("Cascade")),
-            new Beer("Manka extra strong", 0.5d, Type.STOUT, Collections.emptyList()));
+            new Beer("Manka extra strong", 0.5d, null, Collections.emptyList()));
 
     public static Beer defaultBeer = new Beer("Perełka Bezalkoholowa", 4.99, Type.PILSNER, Collections.emptyList());
 }

@@ -7,12 +7,18 @@ import java.util.stream.Collectors;
 
 
 public class Bartender {
+
     private List<Beer> hiddenBeers = new ArrayList<>();
+
     public List<Beer> getAllBeerForBudget(double budget) {
+        if(budget<0){
+            return null; //List.empty();
+        }
         return Bar.beers.stream()
                 .filter(b -> b.getPrice() <= budget)
                 .collect(Collectors.toList());
     }
+
     public Beer getFirstBeerForBudget(double budget){
         for (Beer beer : Bar.beers) {
             if(beer.getPrice()<=budget){
@@ -40,6 +46,7 @@ public class Bartender {
 
     public String findBeerTypeByName(String name){
         return findBeerWithName(name)
+                //.map(b->b.getType().toString())
                 .map(Beer::getType)
                 .map(Enum::toString)
                 .orElse("No such beer"); //vs orElseGet()
